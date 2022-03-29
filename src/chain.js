@@ -1,6 +1,6 @@
 class JestAssertionError extends Error {
   constructor(result, callsite) {
-    super(typeof result.message() === 'function' ? result.message() : result.message);
+    super(typeof result.message === 'function' ? result.message() : result.message);
     this.matcherResult = result;
 
     if (Error.captureStackTrace) {
